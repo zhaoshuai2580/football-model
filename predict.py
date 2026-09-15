@@ -72,7 +72,7 @@ def get_team_recent_stats(team_id):
         return 1.5, 1.5
 
 def main():
-    today = "2026-09-13"
+    today = datetime.now().strftime("%Y-%m-%d")
     url = f"{BASE_URL}/matches?dateFrom={today}&dateTo={today}"
     
     try:
