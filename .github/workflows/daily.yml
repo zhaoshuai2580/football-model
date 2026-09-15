@@ -1,0 +1,35 @@
+name: 每日预测
+
+on:
+  schedule:
+    # 每天北京时间早上 8 点运行（UTC 时间是前一天 0 点）
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # 允许你手动点击按钮立刻运行
+
+permissions:
+  contents: write  # 必须加！允许机器人把算好的数据提交回仓库
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 运行预测脚本
+        run: python predict.py
+
+      - name: 提交更新数据
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data.json
+          git commit -m "更新预测 $(date +%Y-%m-%d)" || echo "无变化"
+          git push
