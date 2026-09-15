@@ -26,7 +26,7 @@
   <table id="match-table">
     <thead>
       <tr>
-        <th>赛事</th><th>时间</th><th>对阵</th><th>主胜</th><th>平</th><th>客胜</th><th>比分</th>
+       <th>编号</th> <th>赛事</th><th>时间</th><th>对阵</th><th>主胜</th><th>平</th><th>客胜</th><th>比分</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -46,7 +46,7 @@
         } else {
           data.matches.forEach(m => {
             tbody.innerHTML += `<tr>
-              <td>${m.league}</td><td>${m.time}</td>
+             <td>${m.lottery_num}</td><td>${m.league}</td><td>${m.time}</td>
               <td>${m.home} VS ${m.away}</td>
               <td class="home">${m.home_win}%</td>
               <td class="draw">${m.draw}%</td>
