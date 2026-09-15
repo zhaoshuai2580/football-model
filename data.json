@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-15",
+  "matches": [
+    {
+      "league": "示例联赛",
+      "time": "20:00",
+      "home": "主队A",
+      "away": "客队A",
+      "home_win": 46.2,
+      "draw": 25.3,
+      "away_win": 28.4,
+      "score": "1.54:1.15"
+    },
+    {
+      "league": "示例联赛",
+      "time": "22:00",
+      "home": "主队B",
+      "away": "客队B",
+      "home_win": 46.2,
+      "draw": 25.3,
+      "away_win": 28.4,
+      "score": "1.54:1.15"
+    }
+  ]
+}
