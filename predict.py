@@ -6,7 +6,7 @@ import time
 from datetime import datetime
 
 # ===== 这里替换成你申请的球小策 API Key =====
-API_KEY = "os.environ.get("QIUXIAOCE_API_KEY", "默认Key如果没有就填这里")"
+API_KEY = "os.environ.get("QIUXIAOCE_API_KEY", "默认Key如果没有就填这里")
 # ==========================================
 BASE_URL = "https://api.qiuxiaoce.com/v1"
 headers = {"Authorization": f"Bearer {API_KEY}"}
